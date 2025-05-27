@@ -1,0 +1,26 @@
+#
+# Telescope find_files
+# Telescope live_grep
+# C-t -- open in new tab
+#
+#TODO:
+  after/ftplugin/cpp/cpp.lua - разобратся с путями содержимым файла и почему print отрабатывает два раза
+  conform  - разобратся что и как делает(тупо скопирован из kickstart)
+  gitsigns  - разобратся что и как делает(тупо скопирован из kickstart)
+  which_key  - разобратся что и как делает(тупо скопирован из kickstart)
+  trouble  - разобратся что и как делает(тупо скопирован из kickstart, но это не точно)
+  todo-comments  - разобратся что и как делает(тупо скопирован из kickstart)
+  telescope  - разобратся что и как делает(тупо скопирован из kickstart)
+  neo-tree  - разобратся что и как делает(тупо скопирован из kickstart)
+  
+  lint  - разобратся что и как делает(тупо скопирован из kickstart)
+  lspconfig  - разобратся что и как делает(тупо скопирован из kickstart)
+  mini  - разобратся что и как делает(тупо скопирован из kickstart)
+
+  lsp
+  saghen/blink.cmp  - разобратся что и как делает(тупо скопирован из kickstart) XXX precompiled https://cmp.saghen.dev/
+  debug  - разобратся что и как делает(тупо скопирован из kickstart)
+  treesitter  - разобратся что и как делает(тупо скопирован из kickstart)
+  indent_line  - разобратся что и как делает(тупо скопирован из kickstart)
+
+
