@@ -65,13 +65,28 @@ require('lazy').setup({
   -- { import = 'custom.plugins' },
   --{ import = 'custom.plugins' },
     { import = 'plugins' },
-   checker = { enabled = false }, -- disable updates
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
 }, {
+
+  performance = {reset_packpath = false, }, -- не сбрасывать runtimepath -- не отключать pack 
+  -- или подключить нужный плагин через - vim.cmd [[packadd plugin-name]]
+
+  -- auto_update_disable ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    git = { pull = false, }, -- Не выполнять git pull при запуске
+    checker = { enabled = false, }, -- Отключить автоматическую проверку обновлений
+    auto_update = false, -- Отключить автоматическое обновление
+
+        -- Отключить уведомления об обновлениях
+    change_detection = {
+      enabled = false,
+      notify = false,
+    },
+  -- auto_update_disable --------------------------------------------------------------------------------
+
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
