@@ -58,4 +58,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- 2025.05.18/18:27:37
 -- --------------------------------------------------------------------------------
 
-vim.keymap.set('n', '<F5>', ':bn<CR>', { desc = 'Move focus to the upper window' })
+--vim.keymap.set('n', '<F5>', ':bn<CR>', { desc = 'Move focus to the upper window' })
