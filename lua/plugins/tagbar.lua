@@ -4,5 +4,6 @@ return {
     config = function ()
     end,
   --opts = {},
-    vim.keymap.set('n', '<leader>tt', "<cmd>TagbarToggle<cr>", { desc = '[T]agBar [T]ogle' }),  --rabotaet
+    --vim.keymap.set('n', '<leader>tt', "<cmd>TagbarToggle<cr>", { desc = '[T]agBar [T]ogle' }),  --rabotaet
+    vim.keymap.set('n', ',tt', "<cmd>TagbarToggle<cr>", { desc = '[T]agBar [T]ogle' }),  --rabotaet
 }
