@@ -59,3 +59,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- --------------------------------------------------------------------------------
 
 --vim.keymap.set('n', '<F5>', ':bn<CR>', { desc = 'Move focus to the upper window' })
+
+-- Вставка времени даты
+--vim.keymap.set('n', '<leader>tt', ':put=strftime(\'%H:%M\')<CR>', { desc = 'Insert current time' })
+--vim.keymap.set('n', '<leader>dt', ':put=strftime(\'%Y-%m-%d %H:%M\')<CR>', { desc = 'Insert datetime' })
+vim.keymap.set('n', ',icd', ':put=strftime(\'%Y.%m.%d/%H:%M:%S\')<CR>', { desc = 'Insert current datetime' })
+vim.keymap.set('n', ',icsd', ':put=strftime(\'%Y%m%d%H%M%S\')<CR>', { desc = 'Insert current datetime short' })
+
