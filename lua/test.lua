@@ -46,6 +46,14 @@ vim.keymap.set('n', '<leader>cr', ':!./build/<Tab>', { noremap = true, desc = "R
 vim.keymap.set('n', '<leader>cc', ':!./CMakeClean<CR>', { noremap = true, desc = "CMake clean" })
 
 
+
+--2025.05.31/11:06:58
+
+-- Вставка даты и времени
+
+
+--put=strftime('[%H:%M]')
+
 --[[
 local wk = require("which-key")
 wk.register({

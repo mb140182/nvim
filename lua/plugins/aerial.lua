@@ -49,9 +49,9 @@ return {
       require("aerial").setup(opts)
       
       -- Клавиши для управления aerial
-      vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>", { desc = "Toggle Aerial" })
-      vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { desc = "Previous symbol" })
-      vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { desc = "Next symbol" })
+      --vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>", { desc = "Toggle Aerial" })
+      --vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { desc = "Previous symbol" })
+      --vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { desc = "Next symbol" })
     end,
     -- Загружать только при вызове
     cmd = "AerialToggle",
