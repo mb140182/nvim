@@ -1,9 +1,31 @@
-#
+lspsaga
+linter
+debug
+
+# +++ TOD0
+# TODO: add hot keys
+# PERF:
+# HACK: figna
+# TODO: using namespace std;
+# NOTE:
+# FIX:: 
+# FIXME: Pkjf
+# XXX:
+# :TodoQuckFix
+# :TodoLockList
+# :TodoTelescope
+# 000 TOD0
+
 # Telescope find_files
 # Telescope live_grep
 # C-t -- open in new tab
-#
-#TODO:
+
+# Чтобы отобразить скрытые файлы в Neovim Neotree, можно использовать клавишу H (или Shift+H). 
+
+
+
+
+
   after/ftplugin/cpp/cpp.lua - разобратся с путями содержимым файла и почему print отрабатывает два раза
   conform  - разобратся что и как делает(тупо скопирован из kickstart)
   gitsigns  - разобратся что и как делает(тупо скопирован из kickstart)

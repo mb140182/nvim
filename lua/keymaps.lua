@@ -66,3 +66,37 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.keymap.set('n', ',icd', ':put=strftime(\'%Y.%m.%d/%H:%M:%S\')<CR>', { desc = 'Insert current datetime' })
 vim.keymap.set('n', ',icsd', ':put=strftime(\'%Y%m%d%H%M%S\')<CR>', { desc = 'Insert current datetime short' })
 
+
+
+-- Make the current project
+  vim.keymap.set('n', '<leader>mm', ':make<CR>', { noremap = true, silent = true, desc = "Run make" })
+
+  -- Clean the project
+  vim.keymap.set('n', '<leader>mc', ':make clean<CR>', { noremap = true, silent = true, desc = "Make clean" })
+
+  -- Open quickfix list after make
+  vim.keymap.set('n', '<leader>mo', ':copen<CR>', { noremap = true, silent = true, desc = "Open quickfix" })
+
+  -- Close quickfix list
+  vim.keymap.set('n', '<leader>mq', ':cclose<CR>', { noremap = true, silent = true, desc = "Close quickfix" })
+-- Make the current project
+
+
+-- Configure CMake project
+--vim.keymap.set('n', '<leader>cm', ':!cmake -B build -DCMAKE_BUILD_TYPE=Debug<CR>', { noremap = true, desc = "CMake configure" })
+vim.keymap.set('n', '<leader>cm', ':!cmake CMakeLists.txt -B build<CR>:!cmake --build build<CR>', { noremap = true, desc = "CMake configure" })
+
+-- Build with CMake
+vim.keymap.set('n', '<leader>cb', ':!cmake --build build<CR>', { noremap = true, desc = "CMake build" })
+
+-- Build with CMake in release mode
+vim.keymap.set('n', '<leader>cr', ':!cmake --build build --config Release<CR>', { noremap = true, desc = "CMake release build" })
+
+-- Run CMake target
+vim.keymap.set('n', '<leader>cr', ':!./build/<Tab>', { noremap = true, desc = "Run CMake target" })
+
+-- Clean CMake build
+--vim.keymap.set('n', '<leader>cc', ':!cmake --build build --target clean<CR>', { noremap = true, desc = "CMake clean" })
+vim.keymap.set('n', '<leader>cc', ':!./CMakeClean<CR>', { noremap = true, desc = "CMake clean" })
+
+
