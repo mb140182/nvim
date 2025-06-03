@@ -139,16 +139,17 @@ vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 vim.opt.fileencodings = 'utf-8,cp936,cp1251'
 
-vim.opt.spelllang= { 'en_us', 'ru' }    -- Словари рус eng
+vim.opt.keymap = 'russian-jcukenwin'    -- Поддержка русского языка ввода
+vim.opt.iminsert = 0                    -- Чтобы при старте ввод был на английском, а не русском 
+vim.opt.imsearch = 0                    -- Чтобы при старте ввод был на английском, а не русском 
+vim.opt.spell = true                       -- spell
+vim.opt.spelllang= { 'en_us', 'ru_ru' }    -- Словари рус eng
+
+
 vim.opt.number = true                   -- Включаем нумерацию строк
 --vim.opt.relativenumber = true           -- Вкл. относительную нумерацию строк
 vim.opt.splitright = true               -- vertical split вправо
 vim.opt.splitbelow = true               -- horizontal split вниз
-
-
-vim.opt.keymap = 'russian-jcukenwin'               -- horizontal split вниз
-vim.opt.iminsert = 0                    -- Чтобы при старте ввод был на английском, а не русском 
-vim.opt.imsearch = 0                    -- Чтобы при старте ввод был на английском, а не русском 
 
 vim.opt.hidden = true                   -- Перемещатся по буферам без сохранения текста, но с сохранением истории редактирования
 
