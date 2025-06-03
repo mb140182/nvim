@@ -188,6 +188,13 @@ end
     vim.fn.mkdir(PathUndo, 'p')
   end
 
+  -- В Neovim shada (от SHAred DAta) — это аналог viminfo TODO: разобратся
+  --vim.opt.shada = "!,'1000,<50,s10,h" -- ограничения для shada-файлов (от share data)
+  --vim.opt.shadafile = "~/.config/nvim/shada/main.shada" -- место где хранится файл shada
+
+  vim.o.confirm = true                    -- Запрашивать подтверждение перед выходом, если есть несохранённые изменения
+  --vim opt.autoread = true                -- Обновлять буфер при изменении файла извне
+
   vim.opt.undofile = true                 -- Возможность отката назад
   vim.opt.undolevels = 1000
 -- swapfile undo backup ---
@@ -195,8 +202,13 @@ end
 --Фолдинг
 --"set foldenable
 --"set fdm=indent
-vim.opt.foldmethod = syntax
-vim.opt.foldlevel = 2
+--vim.opt.foldmethod = 'syntax'
+vim.opt.foldmethod = 'indent'             -- FIXME: не работает по syntax
+--vim.opt.foldlevel = 3 -- 99             -- Управляет уровнем сворачивания (folding) текста. По умолчанию всё развёрнуто
+vim.opt.foldlevelstart = 3                -- Применяется только при открытии файла
+--vim.opt.foldnestmax = 3                 -- Максимальная вложенность
+vim.opt.foldminlines = 5                -- Минимальное число строк для создания свёртки
+vim.opt.foldenable = true
 
 
 vim.opt.showcmd = true                  -- Показывать незавершённые команды в статусбаре
