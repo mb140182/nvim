@@ -204,7 +204,7 @@ end
 --"set fdm=indent
 --vim.opt.foldmethod = 'syntax'
 vim.opt.foldmethod = 'indent'             -- FIXME: не работает по syntax
---vim.opt.foldlevel = 3 -- 99             -- Управляет уровнем сворачивания (folding) текста. По умолчанию всё развёрнуто
+vim.opt.foldlevel = 5 -- 99             -- Управляет уровнем сворачивания (folding) текста. По умолчанию всё развёрнуто
 vim.opt.foldlevelstart = 3                -- Применяется только при открытии файла
 --vim.opt.foldnestmax = 3                 -- Максимальная вложенность
 vim.opt.foldminlines = 5                -- Минимальное число строк для создания свёртки
@@ -224,6 +224,9 @@ vim.opt.termguicolors = true
 
 vim.o.clipboard = 'unnamedplus'
 -- test ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-- Таймауйты
+vim.opt.timeoutlen = 1000 -- для ввода сочетания
+vim.opt.updatetime = 250  -- всплывающие окна
 
 --TODO
 --if vim.fn.isdirectory(PathUndo) == 0 then
