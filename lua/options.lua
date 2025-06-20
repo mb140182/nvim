@@ -10,17 +10,17 @@ vim.o.number = true
 -- vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.o.mouse = 'a'
+vim.o.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
-vim.o.showmode = false    -- не показывать режим (--INSERT и тп) в самом низу
+vim.o.showmode = false -- не показывать режим (--INSERT и тп) в самом низу
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
+	vim.o.clipboard = "unnamedplus"
 end)
 
 -- Enable break indent
@@ -34,7 +34,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Keep signcolumn on by default
-vim.o.signcolumn = 'yes'
+vim.o.signcolumn = "yes"
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -55,10 +55,10 @@ vim.o.splitbelow = true
 --   See `:help lua-options`
 --   and `:help lua-options-guide`
 vim.o.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
-vim.o.inccommand = 'split'
+vim.o.inccommand = "split"
 
 -- Show which line your cursor is on
 vim.o.cursorline = true
@@ -73,41 +73,39 @@ vim.o.confirm = true
 
 -- vim: ts=2 sts=2 sw=2 et
 
-
-
 -- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -- 2025.05.21/15:26:18
 -- --------------------------------------------------------------------------------
 -- устанавливаем настройки табуляции и отступов
 -- Перенос строк
-vim.o.breakindent = true                -- Enable break indent - при переносе строки добавлять отступы
+vim.o.breakindent = true -- Enable break indent - при переносе строки добавлять отступы
 --vim.o.showbreak = '>>> '
-vim.o.showbreak = '↳↳↳ '
+vim.o.showbreak = "↳"
 --opt.wrap = true                       -- включить перенос строк (по умолчанию обычно true)
 vim.opt.linebreak = true                -- Устанавливаем перенос по словам, а не по буквам
 
 -- Отображение различных символов
 vim.opt.list = true
 vim.opt.listchars = {
-  tab = '→ ',
-  trail = '·',
-  nbsp = '␣',
-  extends = '❯',
-  precedes = '❮'
+	tab = "→ ",
+	trail = "·",
+	nbsp = "␣",
+	extends = "❯",
+	precedes = "❮",
 }
 
 -- Отступы и форматирование текста
-vim.opt.tabstop = 2                     -- на сколько пробелов заменяется символ табуляции при отображении
-vim.opt.softtabstop = 2                 -- ширина отступа
-vim.opt.shiftwidth = 2                  -- количество пробелов, вставляемых при шифтинге
+vim.opt.tabstop = 2 -- на сколько пробелов заменяется символ табуляции при отображении
+vim.opt.softtabstop = 2 -- ширина отступа
+vim.opt.shiftwidth = 2 -- количество пробелов, вставляемых при шифтинге
 vim.opt.autoindent = true
-vim.opt.expandtab = true      -- use spaces instead of tabs В режиме Вставки при включённой опции 'expandtab' для вставки символа <Tab> используется соответствующее количество пробелов. Пробелы, кроме того, используются в отступах, которые вставляются по командам '<' и '>'
-vim.opt.smartindent = true    -- autoindent new lines
+vim.opt.expandtab = true -- use spaces instead of tabs В режиме Вставки при включённой опции 'expandtab' для вставки символа <Tab> используется соответствующее количество пробелов. Пробелы, кроме того, используются в отступах, которые вставляются по командам '<' и '>'
+vim.opt.smartindent = true -- autoindent new lines
 
 -- Show which line your cursor is on
 vim.o.cursorline = true
 vim.o.cursorcolumn = false
-vim.o.colorcolumn = '80'
+vim.o.colorcolumn = "80"
 
 --[[  XXX: TODO: разобраться
 vim.opt.textwidth = 80
@@ -125,44 +123,42 @@ vim.opt.formatoptions = {
 
 -- Прокрутка
 --vim.opt.scrolloff=999                   -- Курсор всегда в центре экрана
-vim.opt.scrolloff = 10                   -- Сколько строк отображать после курсора при вертикальной прокрутке
-vim.opt.sidescrolloff = 8               -- Аналог для горизонтальной прокрутке (при wrap=true не имеет эффекта)
+vim.opt.scrolloff = 10 -- Сколько строк отображать после курсора при вертикальной прокрутке
+vim.opt.sidescrolloff = 8 -- Аналог для горизонтальной прокрутке (при wrap=true не имеет эффекта)
 
 --cmd([[
 --filetype indent plugin on
 --syntax enable
 --]])
 
+vim.opt.fileformat = "unix"
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
+vim.opt.fileencodings = "utf-8,cp936,cp1251"
 
-vim.opt.fileformat = 'unix'
-vim.opt.encoding = 'utf-8'
-vim.opt.fileencoding = 'utf-8'
-vim.opt.fileencodings = 'utf-8,cp936,cp1251'
+vim.opt.keymap = "russian-jcukenwin" -- Поддержка русского языка ввода
+vim.opt.iminsert = 0 -- Чтобы при старте ввод был на английском, а не русском
+vim.opt.imsearch = 0 -- Чтобы при старте ввод был на английском, а не русском
+vim.opt.spell = true -- spell
+vim.opt.spelllang = { "en_us", "ru_ru" } -- Словари рус eng
 
-vim.opt.keymap = 'russian-jcukenwin'    -- Поддержка русского языка ввода
-vim.opt.iminsert = 0                    -- Чтобы при старте ввод был на английском, а не русском 
-vim.opt.imsearch = 0                    -- Чтобы при старте ввод был на английском, а не русском 
-vim.opt.spell = true                       -- spell
-vim.opt.spelllang= { 'en_us', 'ru_ru' }    -- Словари рус eng
-
-
-vim.opt.number = true                   -- Включаем нумерацию строк
+vim.opt.number = true -- Включаем нумерацию строк
 --vim.opt.relativenumber = true           -- Вкл. относительную нумерацию строк
-vim.opt.splitright = true               -- vertical split вправо
-vim.opt.splitbelow = true               -- horizontal split вниз
+vim.opt.splitright = true -- vertical split вправо
+vim.opt.splitbelow = true -- horizontal split вниз
 
-vim.opt.hidden = true                   -- Перемещатся по буферам без сохранения текста, но с сохранением истории редактирования
+vim.opt.hidden = true -- Перемещатся по буферам без сохранения текста, но с сохранением истории редактирования
 
-vim.opt.mousehide = true                -- Скрывать указатель мыши, когда печатаем
+vim.opt.mousehide = true -- Скрывать указатель мыши, когда печатаем
 
-vim.opt.autochdir = true                -- Скрывать указатель мыши, когда печатаем
+vim.opt.autochdir = true -- Скрывать указатель мыши, когда печатаем
 
-vim.opt.hlsearch = true                 -- Включаем подсветку выражения, которое ищется в тексте
-vim.opt.incsearch = true                -- При поиске перескакивать на найденный текст в процессе набора строки
-vim.opt.wrapscan = false                -- Останавливать поиск при достижении конца файла
-vim.opt.ignorecase = true               -- Игнорировать регистр букв при поиске
-vim.o.smartcase = true                  -- автоматически учитывающим регистр, но только если в поисковом запросе есть заглавные буквы, откючаетса добавлением '\c' к запросу
-vim.o.inccommand = 'split'              -- это интерактивный предпросмотр результатов при выполнении команд замены (:s) или глобальных команд (:g)
+vim.opt.hlsearch = true -- Включаем подсветку выражения, которое ищется в тексте
+vim.opt.incsearch = true -- При поиске перескакивать на найденный текст в процессе набора строки
+vim.opt.wrapscan = false -- Останавливать поиск при достижении конца файла
+vim.opt.ignorecase = true -- Игнорировать регистр букв при поиске
+vim.o.smartcase = true -- автоматически учитывающим регистр, но только если в поисковом запросе есть заглавные буквы, откючаетса добавлением '\c' к запросу
+vim.o.inccommand = "split" -- это интерактивный предпросмотр результатов при выполнении команд замены (:s) или глобальных команд (:g)
 
 --[[  XXX: TODO: разобраться
 opt.grepformat = "%f:%l:%c:%m"
@@ -173,66 +169,65 @@ if vim.fn.executable('rg') == 1 then
 end
 ]]
 
-
 -- swapfile undo backup +++
-  local PathHome =  vim.fn.getenv("HOME")
-  local PathUndo = PathHome .. '/tmp/state/nvim/undo'
+local PathHome = vim.fn.getenv("HOME")
+local PathUndo = PathHome .. "/tmp/state/nvim/undo"
 
-  vim.opt.backup = false                  -- Отключаем создание бэкапов
-  vim.opt.writebackup = false             -- Отключаем создание бэкапов временных - ~file_name 
-  vim.opt.swapfile = false                -- выключаем своп файл
+vim.opt.backup = false -- Отключаем создание бэкапов
+vim.opt.writebackup = false -- Отключаем создание бэкапов временных - ~file_name
+vim.opt.swapfile = false -- выключаем своп файл
 
-  vim.opt.backupdir = PathHome .. '/TEMP' --Папка для бекапов
+vim.opt.backupdir = PathHome .. "/TEMP" --Папка для бекапов
 
-  if vim.fn.isdirectory(PathUndo) == 0 then
-    vim.fn.mkdir(PathUndo, 'p')
-  end
+if vim.fn.isdirectory(PathUndo) == 0 then
+	vim.fn.mkdir(PathUndo, "p")
+end
 
-  -- В Neovim shada (от SHAred DAta) — это аналог viminfo TODO: разобратся
-  --vim.opt.shada = "!,'1000,<50,s10,h" -- ограничения для shada-файлов (от share data)
-  --vim.opt.shadafile = "~/.config/nvim/shada/main.shada" -- место где хранится файл shada
+-- В Neovim shada (от SHAred DAta) — это аналог viminfo TODO: разобратся
+--vim.opt.shada = "!,'1000,<50,s10,h" -- ограничения для shada-файлов (от share data)
+--vim.opt.shadafile = "~/.config/nvim/shada/main.shada" -- место где хранится файл shada
 
-  vim.o.confirm = true                    -- Запрашивать подтверждение перед выходом, если есть несохранённые изменения
-  --vim opt.autoread = true                -- Обновлять буфер при изменении файла извне
+vim.o.confirm = true -- Запрашивать подтверждение перед выходом, если есть несохранённые изменения
+--vim opt.autoread = true                -- Обновлять буфер при изменении файла извне
 
-  vim.opt.undofile = true                 -- Возможность отката назад
-  vim.opt.undolevels = 1000
+vim.opt.undofile = true -- Возможность отката назад
+vim.opt.undolevels = 1000
 -- swapfile undo backup ---
 
 --Фолдинг
 --"set foldenable
 --"set fdm=indent
 --vim.opt.foldmethod = 'syntax'
-vim.opt.foldmethod = 'indent'             -- FIXME: не работает по syntax
+vim.opt.foldmethod = "indent" -- FIXME: не работает по syntax
 vim.opt.foldlevel = 5 -- 99             -- Управляет уровнем сворачивания (folding) текста. По умолчанию всё развёрнуто
-vim.opt.foldlevelstart = 3                -- Применяется только при открытии файла
+vim.opt.foldlevelstart = 3 -- Применяется только при открытии файла
 --vim.opt.foldnestmax = 3                 -- Максимальная вложенность
-vim.opt.foldminlines = 5                -- Минимальное число строк для создания свёртки
+vim.opt.foldminlines = 5 -- Минимальное число строк для создания свёртки
 vim.opt.foldenable = true
 
-
-vim.opt.showcmd = true                  -- Показывать незавершённые команды в статусбаре
-vim.opt.cmdheight = 2                   --  Поджирает строку снизу, но проблему решает -- more space in the neovim command line for displaying messages
+vim.opt.showcmd = true -- Показывать незавершённые команды в статусбаре
+vim.opt.cmdheight = 2 --  Поджирает строку снизу, но проблему решает -- more space in the neovim command line for displaying messages
 --vim.opt.laststatus=2                  -- Всегда показывать строку состояния
-vim.opt.showmode = false                -- не показывать режим (--INSERT и тп) в самом низу
+vim.opt.showmode = false -- не показывать режим (--INSERT и тп) в самом низу
 --vim.opt.shortmess:append("I")         -- Убрать приветствие
 
-vim.opt.visualbell = true               --Опция позволяет использовать "визуальный звонок" вместо звукового сигнала.
-vim.opt.errorbells = true               --Опция управляет выдачей сигнала (с использованием системного динамика или при помощи моргания экрана)
+vim.opt.visualbell = true --Опция позволяет использовать "визуальный звонок" вместо звукового сигнала.
+vim.opt.errorbells = true --Опция управляет выдачей сигнала (с использованием системного динамика или при помощи моргания экрана)
 
 vim.opt.termguicolors = true
 
-vim.o.clipboard = 'unnamedplus'
+vim.o.clipboard = "unnamedplus"
 -- test ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -- Таймауйты
 vim.opt.timeoutlen = 1000 -- для ввода сочетания
-vim.opt.updatetime = 250  -- всплывающие окна
+vim.opt.updatetime = 250 -- всплывающие окна
 
 --TODO
 --if vim.fn.isdirectory(PathUndo) == 0 then
-    --print("Директория существует"..PathUndo)
+--print("Директория существует"..PathUndo)
 --else
-    --print("Директория не существует"..PathUndo)
+--print("Директория не существует"..PathUndo)
 --end
 
 --vim.cmd.colorscheme('catppuccin-latte')
+
